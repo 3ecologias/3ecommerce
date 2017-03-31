@@ -156,6 +156,7 @@ ul#nav li a {
 }
 
 ul#nav li a:hover { color: #1E732D; }
+ul#nav li a:visited { color: #1E732D!important; }
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 

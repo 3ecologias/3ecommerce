@@ -6,6 +6,75 @@
 
 /* ================================================================== */
 
+/* screenwidth less than 1280px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1366px) {
+
+	/* Intro Styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 828px; }
+
+	/* Header
+	------------------------------------------------------------------ */
+
+	/* main
+	------------------------------------------------------------------ */
+	#main { margin-top: 90px; }
+	#main h1 {
+		font: 4.5em 'Open Sans', sans-serif;
+	}
+	#main p { font: 1.8em 'Open Sans', sans-serif; }
+
+	#main .btn {
+		padding: 0.6em 1.2em 0.3em 1em!important;
+	}
+
+	/* counter */
+	#main #counter {
+		width: 70%;
+		margin: 12px auto 0;
+	}
+	#main #counter span { font: 60px/1em 'Open Sans', serif;	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { margin-bottom: 6px; }
+
+}
+
+/* screenwidth less than 1280px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1280px) {
+
+	/* Intro Styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 828px; }
+
+	/* Header
+	------------------------------------------------------------------ */
+
+	/* main
+	------------------------------------------------------------------ */
+	#main { margin-top: 90px; }
+	#main h1 {
+		font: 4em 'Open Sans', sans-serif;
+	}
+	#main p { font: 1.8em 'Open Sans', sans-serif; }
+
+	#main .btn {
+		padding: 0.6em 1.2em 0.3em 1em!important;
+	}
+
+	/* counter */
+	#main #counter {
+		width: 70%;
+		margin: 12px auto 0;
+	}
+	#main #counter span { font: 60px/1em 'Open Sans', serif;	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { margin-bottom: 6px; }
+
+}
 
 /* screenwidth less than 1140px
 --------------------------------------------------------------------- */
