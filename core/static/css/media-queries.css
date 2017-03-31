@@ -50,6 +50,7 @@
 		color: #fff;
 		margin-bottom: 1.2em;
 		padding: 0 15%;
+		font-weight: 600;
 	}
 
 	#franchise .section-header p {
@@ -166,6 +167,7 @@
 		color: #fff;
 		margin-bottom: 1.2em;
 		padding: 0 15%;
+		font-weight: 600;
 	}
 
 	#franchise .section-header p {
@@ -173,6 +175,9 @@
 	}
 	#franchise a, #franchise a:visited {
 		font-size: 1em;
+	}
+	#franchise .btn-lg {
+    font-size: 1.5em;
 	}
 
 	.tpl-minimal-tabs > li {

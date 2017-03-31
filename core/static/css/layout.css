@@ -356,12 +356,17 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 
 #about p {
   font-weight: 600;
+  text-align: left;
 }
 #about h3 {
   font:2em 'OratorStd', sans-serif;
   color: white;
   letter-spacing: 3px;
   margin-bottom: 12px;
+}
+
+#about .six {
+  margin-top: 1.5em;
 }
 
 /* ------------------------------------------------------------------ */
@@ -399,6 +404,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   color: #fff;
   margin-bottom: 1.2em;
   padding: 0 15%;
+  font-weight: 600;
 }
 #franchise .section-header p {
   color: #fff;
@@ -458,6 +464,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 #call-to-action h2 a { color: #fff !important; }
 #call-to-action p {
   padding: 0 8%;
+  text-align: center;
 }
 #call-to-action span {
   font-family: 'Open Sans', serif;
