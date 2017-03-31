@@ -6,7 +6,7 @@
 
 /* ================================================================== */
 
-/* screenwidth less than 1280px
+/* screenwidth less than 1366px
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 1366px) {
 
@@ -39,6 +39,23 @@
 	/* mailchimp form */
 	#main #mc_embed_signup { margin-bottom: 6px; }
 
+	/* franchise */
+
+	#franchise {
+		padding-top: 4em;
+	}
+
+	#franchise .section-header h1 {
+		font: 2em 'Open Sans', sans-serif;
+		color: #fff;
+		margin-bottom: 1.2em;
+		padding: 0 15%;
+	}
+
+	#franchise .section-header p {
+		font: 1.3em 'Open Sans', sans-serif;
+	}
+
 }
 
 /* screenwidth less than 1280px
@@ -62,6 +79,7 @@
 
 	#main .btn {
 		padding: 0.6em 1.2em 0.3em 1em!important;
+		font-size: 1.5em;
 	}
 
 	/* counter */
@@ -91,8 +109,7 @@
 	------------------------------------------------------------------ */
 	#main { margin-top: 90px; }
 	#main h1 {
-		font: 38px/1.2em 'Open Sans', sans-serif;
-		padding: 0 15%;
+		font: 3em 'Open Sans', sans-serif;
 	}
 	#main p { font: 16px/30px 'Open Sans', sans-serif; }
 
@@ -105,6 +122,61 @@
 
 	/* mailchimp form */
 	#main #mc_embed_signup { margin-bottom: 6px; }
+
+}
+
+/* screenwidth less than 1024px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+
+	/* Intro Styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 828px; }
+
+	/* Header
+	------------------------------------------------------------------ */
+
+	/* main
+	------------------------------------------------------------------ */
+	#main { margin-top: 90px; }
+	#main h1 {
+		font: 3em 'Open Sans', sans-serif;
+	}
+	#main p { font: 16px/30px 'Open Sans', sans-serif; }
+
+	/* counter */
+	#main #counter {
+		width: 70%;
+		margin: 12px auto 0;
+	}
+	#main #counter span { font: 60px/1em 'Open Sans', serif;	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { margin-bottom: 6px; }
+
+	/* franchise */
+
+	#franchise {
+		padding-top: 4em;
+	}
+
+	#franchise .section-header h1 {
+		font: 1.4em 'Open Sans', sans-serif;
+		color: #fff;
+		margin-bottom: 1.2em;
+		padding: 0 15%;
+	}
+
+	#franchise .section-header p {
+		font: 1.3em 'Open Sans', sans-serif;
+	}
+	#franchise a, #franchise a:visited {
+		font-size: 1em;
+	}
+
+	.tpl-minimal-tabs > li {
+		padding: 0!important;
+	}
 
 }
 

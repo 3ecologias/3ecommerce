@@ -402,6 +402,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 #franchise .section-header p {
   color: #fff;
   padding: 0 3%;
+  text-align: justify;
 }
 #franchise h3 {
   font: 15px/24px 'Open Sans', sans-serif;
@@ -548,6 +549,13 @@ footer .copyright  li:first-child:before {
 * Tabs
 */
 
+.nav-align {
+  width: 100%;
+}
+
+.nav-tabs {
+  padding-left: 4em!important;
+}
 .tpl-tabs{
   border-color: #e5e5e5;
   font-size: 12px;
