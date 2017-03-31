@@ -19,8 +19,12 @@ e. Footer
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; font-weight: 300;}
+body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; font-weight: 300; -webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;}
 
+.section-header,
+.section-content {
+  max-width: 880px;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Intro Styles
@@ -34,6 +38,7 @@ body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; fon
   background: url('../images/header-background.jpg') no-repeat center center!important;
   background-size: cover !important;
   -webkit-background-size: cover !important;
+  background-attachment: fixed !important;
 }
 
 /* Header
@@ -155,8 +160,9 @@ ul#nav li a {
   transition: color .2s ease-in-out;
 }
 
-ul#nav li a:hover { color: #1E732D; }
-ul#nav li a:visited { color: #1E732D!important; }
+ul#nav li a:hover { color: rgba(5, 226, 220, 1); }
+ul#nav li a:visited { color: #000!important; }
+ul#nav li a:hover:visited { color: rgba(5, 226, 220, 1); }
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 
@@ -302,7 +308,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 
 #main .send {
   background:rgba(255, 255, 255, 1);
-  font: 14px/24px 'Open Sans', sans-serif;
+  font: 14px/24px 'OratorStd', sans-serif;
   color: #fff;
 }
 
@@ -317,9 +323,8 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 
 #about {
   background: rgba(5,226,220,1);
-  color: #000;
+  color: #4f5454;
   padding-top: 0px;
-  padding-bottom: 72px;
   overflow: hidden;
 }
 #about a, #about a:visited  { color: #0C3012; }
@@ -353,9 +358,8 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   font-weight: 600;
 }
 #about h3 {
-  font: 15px/24px 'Open Sans', sans-serif;
-  color: rgba(4, 106, 56, 1);
-  text-transform: uppercase;
+  font:2em 'OratorStd', sans-serif;
+  color: white;
   letter-spacing: 3px;
   margin-bottom: 12px;
 }
@@ -372,18 +376,15 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   padding-bottom: 72px;
   overflow: hidden;
   min-height: 100vh;
+  background-attachment: fixed !important
 }
-#franchise a, #franchise a:visited  { color: #fff; }
-#franchise a:hover, #franchise a:focus { color: #fff; background: rgba(79, 166, 0, 1); }
+#franchise a, #franchise a:visited  { color: #fff;   font:1.3em 'OratorStd', sans-serif;  }
+#franchise a:hover, #franchise a:focus { color: #fff; background: rgba(5,226,220,0.7); }
 
 #franchise .button{
   margin-bottom: 0px;
 }
 
-.section-header,
-.section-content {
-  max-width: 880px;
-}
 #franchise .section-header {
   text-align: center;
   max-width: 100%;
@@ -402,7 +403,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 #franchise .section-header p {
   color: #fff;
   padding: 0 3%;
-  text-align: justify;
+  font-weight:600;
 }
 #franchise h3 {
   font: 15px/24px 'Open Sans', sans-serif;
@@ -412,6 +413,30 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   margin-bottom: 12px;
 }
 
+#franchise .btn:hover {
+  color: rgba(5, 226, 220, 0.7)!important;
+  background: rgba(255, 255, 255,0.9)!important;
+  border: 0px solid rgba(5, 226, 220,0.5)!important;
+}
+
+#franchise .btn {
+  border: 0px solid rgb(255, 255, 255)!important;
+  padding: 0.4em 0.4em!important;
+  background: rgba(5, 226, 220,0.7)!important;
+  font-family: 'OratorStd', sans-serif!important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+  width: 100%;
+  white-space: normal;
+  margin-top: 1em;
+  padding-top: 0.6em!important;
+}
+
+#franchise .btn-lg {
+  font-size: 2em;
+  line-height: 0.9em;
+}
+
+
 
 /* Call To Action
 ------------------------------------------------------------------ */
@@ -420,21 +445,18 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   text-align: center;
 }
 #call-to-action .section-ads {
-  max-width: 880px;
   padding-top: 36px;
   border-top: 1px dotted #4b8f57;
   border-top: 1px dotted rgba(255, 255, 255, .2);
 }
 #call-to-action h2 {
   font: 4em 'Open Sans', sans-serif;
-  color: #EBEEEE;
   letter-spacing: -0.5px;
   margin-bottom: 18px;
   padding: 0 15%;
 }
 #call-to-action h2 a { color: #fff !important; }
 #call-to-action p {
-  color: #fff;
   padding: 0 8%;
 }
 #call-to-action span {
@@ -779,7 +801,7 @@ footer .copyright  li:first-child:before {
           border-bottom: 1px solid #fff;
           min-height: 16.42857px;
           background-color: rgba(255, 255, 255, 1);
-          color: darkgrey;}
+          color: #4f5454;}
 
           .modal-header .close {
             margin-top: -2px; }
@@ -796,7 +818,7 @@ footer .copyright  li:first-child:before {
               }
 
               .modal label, .modal h4 {color:white;}
-              .form-group .btn-primary{ background-color: #009D50; border-color: #008242; }
+              .form-group .btn-primary{ background-color: #009D50; border-color: #008242;  }
 
               .modal-footer {
                 padding: 15px;
