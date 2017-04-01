@@ -450,7 +450,8 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 /* ---- grid ---- */
 
 .grid {
-  background: #DDD;
+  background: #fff;
+  margin-bottom: 4em;
 }
 
 /* clear fix */
