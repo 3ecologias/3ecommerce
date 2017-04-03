@@ -447,10 +447,12 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 /* d. Portfolio Section
 /* ------------------------------------------------------------------ */
 
+#portfolio {
+  background-color: #d2d2d2;
+}
 /* ---- grid ---- */
 
 .grid {
-  background: #fff;
   margin-bottom: 4em;
 }
 
@@ -473,8 +475,9 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 }
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
+    padding: 0.4em;
 }
 
 
