@@ -209,6 +209,12 @@
 		padding: 0 10%;
 	}
 
+	#main .btn {
+    padding: 0.6em 1em 0.3em 0.4em!important;
+    font-size: 1.5em;
+    width: 5em;
+	}
+
 	/* counter */
 	#main #counter { width: 80%; }
 	#main #counter span { font: 58px/1em 'Open Sans', serif;	}
@@ -408,6 +414,7 @@
 		font: 2em 'Open Sans', sans-serif;
 		padding: 0;
 	}
+	#call-to-action .section-ads { padding-top: 18px; }
 	#about h3 {
 		font-size: 1.7em;
 		font-weight: bold;

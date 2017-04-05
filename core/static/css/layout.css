@@ -594,7 +594,7 @@ footer .copyright  li:first-child:before {
   display: block;
   width: 48px;
   height: 48px;
-  background-color: #303030;
+  background-color: #44adad;
 
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -607,7 +607,7 @@ footer .copyright  li:first-child:before {
   line-height: 48px;
   border-radius: 3px;
 }
-#go-top a:hover { background: #165622; }
+#go-top a:hover { background: #25c7c2; }
 
 
 
