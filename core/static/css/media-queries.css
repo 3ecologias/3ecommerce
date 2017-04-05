@@ -181,7 +181,7 @@
 		font-size: 1em;
 	}
 	#franchise .btn-lg {
-    font-size: 1.5em;
+		font-size: 1.5em;
 	}
 
 	.tpl-minimal-tabs > li {
@@ -201,18 +201,18 @@
 	/* main
 	------------------------------------------------------------------ */
 	#main h1 {
-		font: 35px/1.2em 'Open Sans', sans-serif;
+		font: 1.8 'Open Sans', sans-serif;
 		padding: 0 8%;
 	}
 	#main p {
-		font: 16px/30px 'Open Sans', sans-serif;
+		font: 1.6em 'Open Sans', sans-serif;
 		padding: 0 10%;
 	}
 
 	#main .btn {
-    padding: 0.6em 1em 0.3em 0.4em!important;
-    font-size: 1.5em;
-    width: 5em;
+		padding: 0.6em 1em 0.3em 0.4em!important;
+		font-size: 1.5em;
+		width: 5em;
 	}
 
 	/* counter */
@@ -421,7 +421,7 @@
 	}
 	#about p {
 		font-size: 1.0em;
-		    line-height: 1.8;
+		line-height: 1.8;
 	}
 	#about p.lead {
 		font: 1.2em 'Open Sans', sans-serif;
@@ -475,6 +475,7 @@
 	#main .social { font-size: 17px;}
 	#main .social li { margin: 0 6px; }
 
+	.facebook {padding-left: 1em!important;}
 }
 
 @media (min-width: 768px)
@@ -494,3 +495,20 @@
 		display: none !important;
 	}
 }
+
+@media (min-width: 768px) {
+	.modal-dialog {
+		width: 600px;
+		margin: 30px auto; }
+		.modal-content {
+			-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+			.modal-sm {
+				width: 300px; } }
+				@media (min-width: 992px) {
+					.modal-lg {
+						width: 900px; } }
+						.img-footer {
+							max-height: 6vh;
+							margin-bottom: 0.3em;
+						}
