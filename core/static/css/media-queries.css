@@ -25,10 +25,6 @@
 	}
 	#main p { font: 1.8em 'Open Sans', sans-serif; }
 
-	#main .btn {
-		padding: 0.6em 1.2em 0.3em 1em!important;
-	}
-
 	/* counter */
 	#main #counter {
 		width: 70%;
@@ -83,8 +79,7 @@
 	#main p { font: 1.8em 'Open Sans', sans-serif; }
 
 	#main .btn {
-		padding: 0.6em 1.2em 0.3em 1em!important;
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	/* counter */
@@ -146,6 +141,7 @@
 	#main { margin-top: 90px; }
 	#main h1 {
 		font: 3em 'Open Sans', sans-serif;
+		text-align: center;
 	}
 	#main p { font: 16px/30px 'Open Sans', sans-serif; }
 
@@ -181,7 +177,7 @@
 		font-size: 1em;
 	}
 	#franchise .btn-lg {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	.tpl-minimal-tabs > li {
@@ -200,24 +196,36 @@
 
 	/* main
 	------------------------------------------------------------------ */
+	#main { margin-top: 48px; }
 	#main h1 {
-		font: 1.8 'Open Sans', sans-serif;
-		padding: 0 8%;
+		font: 30px/1.2em 'Open Sans', sans-serif;
+		text-align: center;
 	}
 	#main p {
-		font: 1.6em 'Open Sans', sans-serif;
-		padding: 0 10%;
+		font: 16px/24px 'Open Sans', sans-serif;
+		margin-bottom: 15px;
+		text-align: center;
 	}
-
-	#main .btn {
-		padding: 0.6em 1em 0.3em 0.4em!important;
-		font-size: 1.5em;
-		width: 5em;
+	#main h5 {
+		font: 12px/24px 'Open Sans', sans-serif;
+		text-align: center;
 	}
 
 	/* counter */
-	#main #counter { width: 80%; }
-	#main #counter span { font: 58px/1em 'Open Sans', serif;	}
+	#main #counter {
+		width: 100%;
+		margin: 12px 0 30px;
+	}
+	#main #counter span {
+		font: 46px/1em 'Open Sans', serif;
+		padding: 9px 0 15px;
+	}
+	#main #counter span em {
+		font: 9px/18px 'Open Sans', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 6px;
+	}
 
 	/* mailchimp form */
 	#main #mc_embed_signup {
