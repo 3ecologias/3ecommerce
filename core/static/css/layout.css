@@ -26,6 +26,10 @@ body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; fon
   max-width: 880px;
 }
 
+.mb-20 {
+    margin-bottom: 6em
+}
+
 /* ------------------------------------------------------------------ */
 /* b. Intro Styles
 /* ------------------------------------------------------------------ */
@@ -447,38 +451,31 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-  background-color: #d2d2d2;
+  background-color: #f2f2f2;
 }
 /* ---- grid ---- */
 
-.grid {
-  margin-bottom: 4em;
+#portfolio .btn:hover {
+  color: rgba(5, 226, 220, 0.7)!important;
+  background: rgba(255, 255, 255,0.9)!important;
+  border: 0px solid rgba(5, 226, 220,0.5)!important;
 }
 
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+#portfolio .btn {
+  border: 0px solid rgb(255, 255, 255)!important;
+  background: rgba(5, 226, 220,0.7)!important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+  width: auto;
+  white-space: normal;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
+#portfolio .btn-lg {
+  font-size: 1.5em;
+  line-height: 0.9em;
 }
-
-.grid-item {
-  float: left;
-}
-
-.grid-item img {
-    display: block;
-    max-width: 100%;
-    padding: 0.4em;
-}
-
 
 /* Call To Action
 ------------------------------------------------------------------ */
@@ -583,7 +580,7 @@ footer .copyright  li:first-child:before {
 #go-top {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   text-align: center;
   display: none;
 }
