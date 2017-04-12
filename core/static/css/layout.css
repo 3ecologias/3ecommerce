@@ -30,6 +30,21 @@ body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; fon
     margin-bottom: 6em
 }
 
+.mb-10 {
+    margin-bottom: 3em
+}
+
+
+.mt-10 {
+  margin-top: 3em;
+}
+.mt-5 {
+  margin-top: 10px;
+}
+
+.align-left {
+  text-align: left !important;
+}
 /* ------------------------------------------------------------------ */
 /* b. Intro Styles
 /* ------------------------------------------------------------------ */
@@ -482,6 +497,9 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 #call-to-action {
   padding-top: 30px;
   text-align: center;
+  background: rgba(242, 242, 242, 0.68);
+  background: -webkit-linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+  background: linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
 }
 #call-to-action .section-ads {
   padding-top: 36px;
@@ -518,6 +536,30 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 }
 
 
+/* budget
+------------------------------------------------------------------ */
+#budget {
+  padding-top: 30px;
+  text-align: center;
+  background: rgba(242, 242, 242, 0.68);
+  background: -webkit-linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+  background: linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+}
+
+#budget h2 {
+  font: 3em 'Open Sans', sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  padding: 0 15%;
+}
+
+#budget p {
+  font: 1.2em 'Open Sans', sans-serif;
+  letter-spacing: -0.5px;
+  margin-top: 18px;
+  padding: 0 15%;
+  line-height: 1.2;
+}
 /*
 * Contact form
 */
@@ -535,6 +577,9 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   margin-bottom: 10px;
 }
 
+.form-tip{
+  font-size: 1.5em;
+}
 
 /* ------------------------------------------------------------------ */
 /* e. Footer
@@ -746,13 +791,62 @@ footer .copyright  li:first-child:before {
   padding-left: 3em!important;
 }
 
+/* SLIDER TOGGLE*/
+
+
+.switch-button-label {
+  float: left;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.switch-button-label.off {
+    color: #adadad;
+}
+
+.switch-button-label.on {
+    color: #0088CC;
+    margin-left: 1em;
+}
+
+.switch-button-background {
+    float: left;
+    position: relative;
+
+    background: #ccc;
+    border: 1px solid #aaa;
+
+    margin: 1px 10px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.switch-button-button {
+    position: absolute;
+
+    left: -1px;
+    top : -1px;
+
+    background: #FAFAFA;
+    border: 1px solid #aaa;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* END SLIDER TOGGLE */
 @media only screen and (max-width: 400px) {
   .facebook {
     padding-left: 1em!important;
   }
 
 }
-
 
 .navbar-default .navbar-brand {
   width: 30em;
