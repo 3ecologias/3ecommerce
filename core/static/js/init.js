@@ -184,5 +184,34 @@ jQuery(document).ready(function($) {
     });
 
 
+    $("#itens").slider({
+    range: "min",
+    value: 3000,
+    step: 100,
+    min: 100,
+    max: 50000,
+    slide: function( event, ui ) {
+        $( ".slider" ).val( ui.value + " itens");
+    }
+  });
+
+
+  $(".slider").change(function () {
+      var value = this.value.substring(1);
+      console.log(value);
+      $("#itens").slider("value", parseInt(value));
+  });
+
+  $(".switch-wrapper").switchButton({
+          on_label: 'Não',
+          off_label: 'Sim',
+          width: 60,
+          height: 30,
+          button_width: 40
+        }
+
+  );
+
+
 
 });

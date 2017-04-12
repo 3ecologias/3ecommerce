@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Favico
   ================================================== -->
@@ -48,6 +49,17 @@
   <!-- ANALYTICS
   ================================================== -->
 
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97122600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body>
@@ -64,18 +76,15 @@
             <img class="img-responsive" src="{% static 'images/logo.svg' %}" alt="3E Comércio Eletrônico">
           </a>
         </div>
-        <div id="slogan" class="seven columns offset-2">
-          <p>Ferramentas de Comércio Eletrônico, Marketing Digital e Atendimento Online para ampliar suas vendas</p>
+        <div id="slogan" class="seven columns offset-2 mt-10">
+          <p>Criação de Lojas Virtuais e ferramentas para Atendimento Online e Marketing Digital</p>
         </div>
         <div class="twelve columns">
           <h1>Tenha superpoderes na Internet</h1>
         </div>
       </header> <!-- Header End -->
-      <div class="two columns offset-8">
-        <a class="smoothscroll" href="#about"><button class="btn btn-lg">conheça</button></a>
-      </div>
-      <div class="two columns">
-        <a href="#contatos" class="modal-link" data-toggle="modal"><button class="btn btn-lg">contato</button></a>
+      <div class="two columns offset-5 mt-10">
+        <a class="smoothscroll" href="#about"><button class="btn btn-lg">saiba mais</button></a>
       </div>
     </div> <!-- main end -->
   </section> <!-- end intro section -->
@@ -147,7 +156,7 @@
                 <div class="fade in active">
                   <p class="lead"> Atendemos em escala nacional, com plataformas desenvolvidas para diversos setores da economia. Nosso atendimento é rápido, especializado e didático. O foco é sempre aumentar as vendas de nossos clientes e ampliar sua presença digital junto a seus consumidores. Pagamento facilitado em até 12x! </p>
                   <div class="five columns offset-3">
-                    <a href="#contatos" class="modal-link" data-toggle="modal"><button class="btn btn-lg">contrate</button></a>
+                    <a class="smoothscroll" href="#orcamento" ><button class="btn btn-lg">orçamento</button></a>
                   </div>
                 </div>
               </div>
@@ -162,40 +171,73 @@
 </section> <!-- About Section End-->
 
 <!-- portfolio -->
-<section id="portfolio">
+<section id="orcamento">
   <div class="row section-content">
     <div class="twelve columns">
-      <div id="call-to-action">
+      <div id="budget">
         <div class="row section-ads">
           <div class="ten columns offset-1">
-            <h2>Portfólio</h2>
-            <div class="six columns">
-              <a href="http://vovodida.org.br" alt="Associação Vovó Dida" target="_blank"><img src="{% static 'images/vovodida.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://ebat.com.br" alt="Ebat - Soluções em Baterias" target="_blank"><img src="{% static 'images/ebat1.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://graficarecife.com.br" alt="Gráfica Recife" target="_blank"><img src="{% static 'images/graficarecife.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://farmaciacavalcante.com.br" alt="Farmácias Cavalcante" target="_blank"><img src="{% static 'images/cavalcante.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://graficarecife.com.br" alt="Gráfica Recife" target="_blank"><img src="{% static 'images/graficarecife2.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://vovodida.org.br" alt="Associação Vovó Dida" target="_blank"><img src="{% static 'images/vovodida2.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://vovodida.org.br" alt="Associação Vovó Dida" target="_blank"><img src="{% static 'images/vovodida3.png' %}" /></a>
-            </div>
-            <div class="six columns">
-              <a href="http://ebat.com.br" alt="Ebat - Soluções em Baterias" target="_blank"><img src="{% static 'images/ebat3.png' %}" /></a>
+            <h2>Faça um orçamento</h2>
+            <div class="ten columns offset-1">
+              <!-- Contact Form -->
+              <div class="row">
+                  <form class="form contact-form" id="contact_form" method="POST">
+                    {% csrf_token %}
+                    <div class="clearfix">
+                        <!-- Name -->
+                        <div class="form-group">
+                          {{ form.name }}
+                        </div>
+                        <!-- Email -->
+                        <div class="form-group">
+                          {{ form.email }}
+                        </div>
+                        <!-- Telefone -->
+                        <div class="form-group">
+                          {{ form.phone }}
+                        </div>
+                        <!-- Itens -->
+                        <div id="itens"></div>
+                        <div class="form-group mt-5">
+                          {{ form.itens }}
+                        </div>
+                        <!-- Marketing -->
+                        <p class="eight columns"> Serviço de Marketing Digital? </p>
+                        <div class="two columns switch-wrapper">
+                          {{ form.marketing }}
+                        </div>
+                        <!-- Atendimento -->
+                        <p class="eight columns"> Atendimento Online? </p>
+                        <div class="two columns switch-wrapper">
+                          {{ form.chat }}
+                        </div>
+                        <!-- Marketing -->
+                        <p class="eight columns"> Possui Identidade Visual? </p>
+                        <div class="two columns switch-wrapper">
+                          {{ form.visual }}
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group mt-10">
+                          {{ form.message }}
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                      <div class="four columns offset-4">
+                        <!-- Send Button -->
+                        <button type="submit" name="contact" class="submit_btn btn btn-mod send">Enviar</button>
+                      </div>
+                    </div>
+                    <div id="result"></div>
+                  </form>
+                  <div class="form-tip mt-5 mb-10">
+                    <i class="fa fa-phone"></i> Ligue pra gente! <br><a href="tel:+558130487072">+55 (81) 3048 7072</a>
+                  </div>
+              </div>
+              <!-- End Contact Form -->
             </div>
           </div>
         </div> <!-- end section-ads -->
-      </div> <!-- end call-to-action -->
+      </div> <!-- end budget -->
     </div>
   </div>
 </section>
@@ -209,8 +251,7 @@
     <li class="current"><a class="smoothscroll" href="#intro">Início</a></li>
     <li><a class="smoothscroll" href="#about">Conheça</a></li>
     <li><a class="smoothscroll" href="#franchise">Atendimento</a></li>
-    <li><a class="smoothscroll" href="#portfolio">Portfólio</a></li>
-    <li><a href="#contatos" class="modal-link" data-toggle="modal">Contrate</a></li>
+    <li><a class="smoothscroll" href="#orcamento">Orçamento</a></li>
   </ul> <!-- end #nav -->
 </nav> <!-- end #nav-wrap -->
 
@@ -252,6 +293,30 @@
                     <div class="form-group">
                       {{ form.email }}
                     </div>
+                    <!-- Telefone -->
+                    <div class="form-group">
+                      {{ form.phone }}
+                    </div>
+                    <!-- Itens -->
+                    <div id="itens"></div>
+                    <div class="form-group mt-5">
+                      {{ form.itens }}
+                    </div>
+                    <!-- Marketing -->
+                    <p> Serviço de Marketing Digital? </p>
+                    <div class="switch-wrapper mt-5">
+                      {{ form.marketing }}
+                    </div>
+                    <!-- Atendimento -->
+                    <p> Ferramenta para Atendimento Online? </p>
+                    <div class="switch-wrapper mt-5">
+                      {{ form.chat }}
+                    </div>
+                    <!-- Marketing -->
+                    <p> Possui Identidade Visual? </p>
+                    <div class="switch-wrapper mt-5">
+                      {{ form.visual }}
+                    </div>
                   </div>
                   <div class="six columns">
                     <!-- Message -->
@@ -264,7 +329,7 @@
                   <div class="cf-left-col">
                     <!-- Inform Tip -->
                     <div class="form-tip pt-20">
-                      <i class="fa fa-info-circle"></i> Todos os campos são necessários
+                      <i class="fa fa-phone"></i> Ligue pra gente no <br> <a href="tel:+558130487072">+55 (81) 3048 7072.
                     </div>
                   </div>
                   <div class="cf-right-col">
@@ -299,7 +364,24 @@
 <script src="{% static 'js/waypoints.js' %}"></script>
 <script src="{% static 'js/jquery.countdown.js' %}"></script>
 <script src="{% static 'js/jquery.placeholder.js' %}"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="{% static 'js/backstretch.js' %}"></script>
+<script src="{% static 'js/jquery.switchButton.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/58ebafa330ab263079b5f365/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>
