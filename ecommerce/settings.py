@@ -23,16 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_s0=jv8c&8)#0@znj^8&!lncw37tg2zr(-ht(($w209zm0u2ym'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
+
 DEBUG = False
-=======
+
 #Production
 # DEBUG = False
 #
 # ALLOWED_HOSTS = ['tenhasualojaonline.com', 'wwww.tenhasualojaonline.com']
 #Dev
 DEBUG = True
->>>>>>> 803f854cbbf131f94ca3bf40bb5dd79fd1d15882
 
 ALLOWED_HOSTS = ['*']
 
