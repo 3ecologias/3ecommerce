@@ -19,13 +19,13 @@ class ContactUs(forms.Form):
         widget=forms.TextInput(attrs={'placeholder': 'Itens no Catálogo', 'id': 'itens', 'class': 'form-control slider', 'type': 'text'}))
 
     marketing = forms.CharField(required=False,
-        widget=forms.TextInput(attrs={'placeholder': '', 'id': 'marketing', 'class': 'form-control', 'type': 'checkbox', 'value': '1'}))
+        widget=forms.CheckboxInput(attrs={'placeholder': '', 'id': 'marketing', 'class': 'form-control', 'type': 'checkbox'}))
 
     chat = forms.CharField(required=False,
-        widget=forms.TextInput(attrs={'placeholder': '', 'id': 'chat', 'class': 'form-control', 'type': 'checkbox', 'value': '1'}))
+        widget=forms.CheckboxInput(attrs={'placeholder': '', 'id': 'chat', 'class': 'form-control', 'type': 'checkbox'}))
 
     visual = forms.CharField(required=False,
-        widget=forms.TextInput(attrs={'placeholder': '', 'id': 'visual', 'class': 'form-control', 'type': 'checkbox', 'value': '1'}))
+        widget=forms.CheckboxInput(attrs={'placeholder': '', 'id': 'visual', 'class': 'form-control', 'type': 'checkbox'}))
 
     message = forms.CharField(
         required=False,
@@ -44,7 +44,7 @@ class ContactUs(forms.Form):
         subject = '[3ECOMMERCE - Novo Contato]'
 
         try:
-            email = EmailMessage(subject+" de "+name, message, from_email,['admin@3ecologias.net'])
+            email = EmailMessage(subject+" de "+name+" tel: "+phone+" Prod: "+itens+" M:"+marketing+" C:"+chat+" ID:"+visual, message, from_email,['admin@3ecologias.net'])
             email.content_subtype = "html"
             email.send()
         except BadHeaderError:
