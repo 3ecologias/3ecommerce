@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
 from django import forms
 from django.core.mail import send_mail, BadHeaderError
 from django.core.mail import EmailMessage
+from django.template.loader import get_template
+from django.template import Context
 
 
 class ContactUs(forms.Form):
@@ -46,12 +45,23 @@ class ContactUs(forms.Form):
         message = self.cleaned_data['message']
         subject = '[3ECOMMERCE - Novo Contato]'
 
+        template = get_template('core/email_template.html')
+
+        context_email = {
+            'name': name,
+            'from_email': from_email,
+            'phone': phone,
+            'itens': itens,
+            'marketing': marketing,
+            'chat': chat,
+            'visual': visual,
+            'message': message,
+        }
+
+        content = template.render(context_email)
+
         try:
-            email = EmailMessage(subject+" de "+name+" tel: "+phone,
-
-            "Número de produtos: "+itens+"<br>Com serviço de marketing digital? "+marketing+"<br>Com serviço de atendimento online? "+chat+"<br>Possui identidade visual? "+visual+"<br>Mensagem: "+message,
-
-            from_email,['admin@3ecologias.net'])
+            email = EmailMessage(subject+" de "+name+" tel: "+phone, content, from_email,['admin@3ecologias.net'])
             email.content_subtype = "html"
             email.send()
         except BadHeaderError:

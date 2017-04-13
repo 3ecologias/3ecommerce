@@ -24,13 +24,13 @@ SECRET_KEY = '_s0=jv8c&8)#0@znj^8&!lncw37tg2zr(-ht(($w209zm0u2ym'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #Production
-DEBUG = False
-
-ALLOWED_HOSTS = ['tenhasualojaonline.com', 'wwww.tenhasualojaonline.com']
-#Dev
-# DEBUG = True
+# DEBUG = False
 #
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['tenhasualojaonline.com', 'wwww.tenhasualojaonline.com']
+#Dev
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
