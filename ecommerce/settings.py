@@ -23,9 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_s0=jv8c&8)#0@znj^8&!lncw37tg2zr(-ht(($w209zm0u2ym'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#Production
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tenhasualojaonline.com', 'wwww.tenhasualojaonline.com']
+#Dev
+# DEBUG = True
+#
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -143,3 +148,5 @@ DEFAULT_FROM_EMAIL = 'admin@3ecologias.net'
 EMAIL_HOST_USER = '3ecologias'
 EMAIL_HOST_PASSWORD = 'm1c0leao'
 EMAIL_USE_TLS = True
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Lfd7xwUAAAAAP3_9o_3hS1XJgyP-tiuH2pgwy_n'
