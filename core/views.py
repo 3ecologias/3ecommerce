@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from django.shortcuts import render, redirect, HttpResponseRedirect, HttpResponse
 from django.template.loader import get_template
 from django.contrib import messages
