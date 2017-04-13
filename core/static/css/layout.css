@@ -30,6 +30,24 @@ body { background: #0f0f0f; font-family: 'Open Sans', sans-serif !important; fon
     margin-bottom: 6em
 }
 
+.mb-10 {
+    margin-bottom: 3em
+}
+
+.mb-5 {
+    margin-bottom: 1em
+}
+
+.mt-10 {
+  margin-top: 3em;
+}
+.mt-5 {
+  margin-top: 10px;
+}
+
+.align-left {
+  text-align: left !important;
+}
 /* ------------------------------------------------------------------ */
 /* b. Intro Styles
 /* ------------------------------------------------------------------ */
@@ -447,23 +465,23 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 
 
 /* ------------------------------------------------------------------ */
-/* d. Portfolio Section
+/* d. orcamento Section
 /* ------------------------------------------------------------------ */
 
-#portfolio {
+#orcamento {
   background-color: #f2f2f2;
 }
 /* ---- grid ---- */
 
-#portfolio .btn:hover {
+#orcamento .btn:hover {
   color: rgba(5, 226, 220, 0.7)!important;
   background: rgba(255, 255, 255,0.9)!important;
   border: 0px solid rgba(5, 226, 220,0.5)!important;
 }
 
-#portfolio .btn {
+#orcamento .btn {
   border: 0px solid rgb(255, 255, 255)!important;
-  background: rgba(5, 226, 220,0.7)!important;
+  background: #f2f2f2!important;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
   width: auto;
   white-space: normal;
@@ -472,7 +490,7 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   font-weight: 600;
 }
 
-#portfolio .btn-lg {
+#orcamento .btn-lg {
   font-size: 1.5em;
   line-height: 0.9em;
 }
@@ -482,6 +500,9 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 #call-to-action {
   padding-top: 30px;
   text-align: center;
+  background: rgba(242, 242, 242, 0.68);
+  background: -webkit-linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+  background: linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
 }
 #call-to-action .section-ads {
   padding-top: 36px;
@@ -518,6 +539,30 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
 }
 
 
+/* budget
+------------------------------------------------------------------ */
+#budget {
+  padding-top: 30px;
+  text-align: center;
+  background: rgba(242, 242, 242, 0.68);
+  background: -webkit-linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+  background: linear-gradient(to top, rgba(5,226,220,1), rgba(242, 242, 242, 0.68));
+}
+
+#budget h2 {
+  font: 3em 'Open Sans', sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  padding: 0 15%;
+}
+
+#budget p {
+  font: 1.2em 'Open Sans', sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  padding: 0 5%;
+  line-height: 1.2;
+}
 /*
 * Contact form
 */
@@ -535,6 +580,9 @@ ul#nav li.current a { color: rgba(5, 226, 220, 1); }
   margin-bottom: 10px;
 }
 
+.form-tip{
+  font-size: 1.5em;
+}
 
 /* ------------------------------------------------------------------ */
 /* e. Footer
@@ -746,13 +794,61 @@ footer .copyright  li:first-child:before {
   padding-left: 3em!important;
 }
 
+/* SLIDER TOGGLE*/
+
+
+.switch-button-label {
+  float: left;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.switch-button-label.off {
+    color: #adadad;
+}
+
+.switch-button-label.on {
+    color: #0088CC;
+}
+
+.switch-button-background {
+    float: left;
+    position: relative;
+
+    background: #ccc;
+    border: 1px solid #aaa;
+
+    margin: 1px 10px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.switch-button-button {
+    position: absolute;
+
+    left: -1px;
+    top : -1px;
+
+    background: #FAFAFA;
+    border: 1px solid #aaa;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* END SLIDER TOGGLE */
 @media only screen and (max-width: 400px) {
   .facebook {
     padding-left: 1em!important;
   }
 
 }
-
 
 .navbar-default .navbar-brand {
   width: 30em;
@@ -762,145 +858,3 @@ footer .copyright  li:first-child:before {
 .navbar-default {
   background: none!important;
 }
-
-
-.modal-open {
-  overflow: hidden; }
-
-  .modal {
-    display: none;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1050;
-    -webkit-overflow-scrolling: touch;
-    outline: 0;
-  }
-  .modal.fade .modal-dialog {
-    -webkit-transform: translate(0, -25%);
-    -ms-transform: translate(0, -25%);
-    -o-transform: translate(0, -25%);
-    transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    -moz-transition: -moz-transform 0.3s ease-out;
-    -o-transition: -o-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out; }
-    .modal.in .modal-dialog {
-      -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-      -o-transform: translate(0, 0);
-      transform: translate(0, 0);
-    }
-
-    .modal-open .modal {
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-
-    .modal-dialog {
-      position: relative;
-      width: auto;
-      margin: 10px;
-    }
-
-    .modal-content {
-      position: relative;
-      background-color: #fff;
-      border: 1px solid #999;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 6px;
-      -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-      background-clip: padding-box;
-      outline: 0;
-      top: 8vh;
-    }
-
-    .modal-backdrop {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 100;
-      background-color: #000;
-    }
-    .modal-backdrop.fade {
-      opacity: 0;
-      filter: alpha(opacity=0); }
-      .modal-backdrop.in {
-        opacity: 0.5;
-        filter: alpha(opacity=50); }
-
-        .modal-header {
-          padding: 15px;
-          font: 14px/24px 'Open Sans', sans-serif;
-          border-bottom: 1px solid #fff;
-          min-height: 16.42857px;
-          background-color: rgba(255, 255, 255, 1);
-          color: #4f5454;}
-
-          .modal-header .close {
-            margin-top: -2px; }
-
-            .modal-title {
-              margin: 0;
-              line-height: 1.42857; }
-
-              .modal-body {
-                position: relative;
-                padding: 15px;
-                background-color: #f9f9f9;
-                line-height: 1.75;
-              }
-
-              .modal label, .modal h4 {color:white;}
-              .form-group .btn-primary{ background-color: #009D50; border-color: #008242;  }
-
-              .modal-footer {
-                padding: 15px;
-                text-align: right;
-                border-top: 1px solid #e5e5e5; }
-                .modal-footer:before, .modal-footer:after {
-                  content: " ";
-                  display: table; }
-                  .modal-footer:after {
-                    clear: both; }
-                    .modal-footer .btn + .btn {
-                      margin-left: 5px;
-                      margin-bottom: 0; }
-                      .modal-footer .btn-group .btn + .btn {
-                        margin-left: -1px; }
-                        .modal-footer .btn-block + .btn-block {
-                          margin-left: 0; }
-
-                          .modal-scrollbar-measure {
-                            position: absolute;
-                            top: -9999px;
-                            width: 50px;
-                            height: 50px;
-                            overflow: scroll; }
-
-                            @media (min-width: 768px) {
-                              .modal-dialog {
-                                width: 600px;
-                                margin: 30px auto; }
-
-                                .modal-content {
-                                  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-                                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
-
-                                  .modal-sm {
-                                    width: 300px; } }
-                                    @media (min-width: 992px) {
-                                      .modal-lg {
-                                        width: 900px; } }
-
-
-                                        .img-footer {
-                                          max-height: 6vh;
-                                          margin-bottom: 0.3em;
-                                        }

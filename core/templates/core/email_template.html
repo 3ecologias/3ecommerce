@@ -1,0 +1,25 @@
+{% autoescape off %}
+
+Nome:<br>
+{{ name }}
+<br>
+<br>
+Email:<br>
+{{ from_email }}
+<br>
+<br>
+Telefone:<br>
+{{ phone }}
+<br>
+<br>
+Número de produtos: {{ itens }}
+<br>
+Com serviço de marketing digital? {{ marketing }}
+<br>
+Com serviço de atendimento online? {{ chat }}
+<br>
+Possui identidade visual? {{ visual }}
+<br>
+Mensagem:<br>
+{{ message|safe|striptags }}
+{% endautoescape %}
