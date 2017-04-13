@@ -203,11 +203,11 @@ jQuery(document).ready(function($) {
   });
 
   $(".switch-wrapper").switchButton({
-          on_label: 'Não',
-          off_label: 'Sim',
-          width: 60,
-          height: 30,
-          button_width: 40
+          on_label: 'Sim',
+          off_label: 'Não',
+          width: 30,
+          height: 20,
+          button_width: 20
         }
 
   );

@@ -31,7 +31,7 @@ class ContactUs(forms.Form):
 
     message = forms.CharField(
         required=False,
-        widget=forms.Textarea(attrs={'placeholder': 'Observações *', 'id': 'message', 'class': 'form-control', 'rows': '3'})
+        widget=forms.Textarea(attrs={'placeholder': 'Observações', 'id': 'message', 'class': 'form-control', 'rows': '3'})
     )
 
     def send_email(self):
